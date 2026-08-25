@@ -33,6 +33,5 @@ resource "aws_s3_bucket" "dayanand_bucket" {
 
     tags = {
         Environment = "development"
-        CreatedBy   = "Terraform"
     }
 }
