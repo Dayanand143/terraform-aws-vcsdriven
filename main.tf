@@ -4,6 +4,7 @@ resource "aws_vpc" "mainvpc" {
     enable_dns_hostnames = true
     tags = {
         Name = "dev-main-vpc"
+        Environment = "development workload"
     }
 }
 
@@ -13,7 +14,7 @@ resource "aws_subnet" "privatesubnet" {
     availability_zone = var.private_subnet_az
     tags = {
         Name = "dev-main-subnet"
-        Environment = "development"
+        Environment = "development workload"
     }
 }
 
@@ -24,7 +25,7 @@ resource "aws_subnet" "publicsubnet" {
     map_public_ip_on_launch = true
     tags = {
         Name = "dev-main-public-subnet"
-        Environment = "development"
+        Environment = "development workload"
     }
 }
 
@@ -32,6 +33,6 @@ resource "aws_s3_bucket" "dayanand_bucket" {
     bucket = "dayanand-bucket-depends-on-lab04"
 
     tags = {
-        Environment = "development"
+        Environment = "development workload"
     }
 }
