@@ -5,6 +5,7 @@ resource "aws_vpc" "mainvpc" {
     tags = {
         Name = "dev-main-vpc"
         Environment = "development workload"
+        Project = "Terraform-dayanand"
     }
 }
 
@@ -15,6 +16,7 @@ resource "aws_subnet" "privatesubnet" {
     tags = {
         Name = "dev-main-subnet"
         Environment = "development workload"
+        Project = "Terraform-dayanand"
     }
 }
 
@@ -26,5 +28,6 @@ resource "aws_subnet" "publicsubnet" {
     tags = {
         Name = "dev-main-public-subnet"
         Environment = "development workload"
+        Project = "Terraform-dayanand"
     }
 }
