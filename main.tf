@@ -27,3 +27,12 @@ resource "aws_subnet" "publicsubnet" {
         Environment = "development"
     }
 }
+
+resource "aws_s3_bucket" "dayanand_bucket" {
+    bucket = "dayanand-bucket-depends-on-lab04"
+
+    tags = {
+        Environment = "development"
+        CreatedBy   = "Terraform"
+    }
+}
